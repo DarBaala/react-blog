@@ -1,0 +1,11 @@
+@import "./libs/normalize";
+
+@import "./components/all";
+
+body {
+  font-family: "Mulish", sans-serif;
+}
+.container {
+  width: 1300px;
+  margin: auto;
+}

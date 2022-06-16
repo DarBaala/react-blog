@@ -1,0 +1,46 @@
+.header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 111;
+  &__logo {
+    height: 40px;
+    width: 220px;
+  }
+  &__menu {
+    display: flex;
+  }
+  &__items {
+    color: #353535;
+    margin-right: 35px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      color: #959595;
+    }
+  }
+  &__style {
+    cursor: pointer;
+    background-image: url(../../../public/img/sun-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 46px;
+    height: 46px;
+    transition: 0.15s ease-in-out;
+    &:hover {
+      transform: rotate(360deg);
+      background-image: url(../../../public/img/dark-icon.svg);
+    }
+  }
+}

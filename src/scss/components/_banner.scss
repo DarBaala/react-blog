@@ -1,0 +1,46 @@
+.banner {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  &__title {
+    h1 {
+      margin: 0;
+      font-family: "Mulish";
+      font-style: italic;
+      font-weight: 900;
+      font-size: 94px;
+      color: #fff;
+    }
+  }
+  &__block {
+    background: rgba(47, 47, 47, 0.63);
+    padding: 105px 130px 35px;
+  }
+  &__text {
+    color: #fff;
+    font-weight: 300;
+    font-size: 63px;
+    text-align: center;
+    margin-bottom: 60px;
+    &-up {
+      background-color: #e03e2d;
+      max-width: 300px;
+      margin: auto;
+    }
+  }
+  &__discription {
+    color: #fff;
+    font-size: 28px;
+    line-height: 35px;
+    text-align: center;
+  }
+}
