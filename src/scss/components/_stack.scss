@@ -11,52 +11,81 @@
     display: flex;
     flex-wrap: wrap;
   }
-  &__items {
+
+  &__html {
     margin-right: 20px;
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 45px;
     cursor: pointer;
-    &-html {
-      color: #fff;
-      background-color: #e03e2d;
-      padding: 10px;
-    }
-    &-css {
-      color: #fff;
-      background-color: #173459;
-      padding: 10px;
-    }
-    &-js {
-      color: #000;
-      background-color: #f7df1e;
-      padding: 10px;
-    }
-    &-ts {
-      color: #fff;
-      background-color: #3178c6;
-      padding: 10px;
-    }
-    &-react {
-      color: #61dafb;
-      background-color: #2a2c2e;
-      padding: 10px;
-    }
-    &-figma {
-      color: #fef5f4;
-      background-color: #1e1e1e;
-      padding: 10px;
-    }
-    &-photoshop {
-      color: #31a8ff;
-      background-color: #001e36;
-      padding: 10px;
-    }
-    &-illustrator {
-      color: #ff9a00;
-      background-color: #330000;
-      padding: 10px;
-    }
+    color: #fff;
+    background-color: #e03e2d;
+    padding: 10px;
+  }
+  &__css {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 45px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #173459;
+    padding: 10px;
+  }
+  &__js {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 45px;
+    cursor: pointer;
+    color: #000;
+    background-color: #f7df1e;
+    padding: 10px;
+  }
+  &__ts {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 45px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #3178c6;
+    padding: 10px;
+  }
+  &__react {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 45px;
+    cursor: pointer;
+    color: #61dafb;
+    background-color: #2a2c2e;
+    padding: 10px;
+  }
+  &__figma {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 45px;
+    cursor: pointer;
+    color: #fef5f4;
+    background-color: #1e1e1e;
+    padding: 10px;
+  }
+  &__photoshop {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 45px;
+    cursor: pointer;
+    color: #31a8ff;
+    background-color: #001e36;
+    padding: 10px;
+  }
+  &__illustrator {
+    color: #ff9a00;
+    background-color: #330000;
+    padding: 10px;
   }
   &__discription {
     color: #000;

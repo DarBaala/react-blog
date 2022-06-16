@@ -5,6 +5,25 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/navigation";
 
+const slideObj = [
+  {
+    imageUrl: require("../assets/img/slide-1.webp"),
+    discription: " От фотографа до Frontend разработчика",
+  },
+  {
+    imageUrl: require("../assets/img/slide-2.webp"),
+    discription: " От фотографа до Frontend разработчика",
+  },
+  {
+    imageUrl: require("../assets/img/slide-3.webp"),
+    discription: " От фотографа до Frontend разработчика",
+  },
+  {
+    imageUrl: require("../assets/img/slide-4.webp"),
+    discription: " От фотографа до Frontend разработчика",
+  },
+];
+
 const Blog = () => {
   return (
     <div className="container">
@@ -16,51 +35,13 @@ const Blog = () => {
             slidesPerView={2}
             spaceBetween={40}
             navigation
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
           >
-            <SwiperSlide>
-              <img
-                width={550}
-                height={350}
-                className="blog__img"
-                src={require("../assets/img/slide-1.webp")}
-                alt="Photo"
-              />
-              <div className="blog__text">
-                От фотографа до Frontend разработчика
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                width={550}
-                height={350}
-                className="blog__img"
-                src={require("../assets/img/slide-2.webp")}
-                alt="Photo"
-              />
-              <div className="blog__text">Гуманитарий и JavaScript</div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                width={550}
-                height={350}
-                className="blog__img"
-                src={require("../assets/img/slide-3.webp")}
-                alt="Photo"
-              />
-              <div className="blog__text">Гуманитарий и JavaScript</div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                width={550}
-                height={350}
-                className="blog__img"
-                src={require("../assets/img/slide-4.webp")}
-                alt="Photo"
-              />
-              <div className="blog__text">Гуманитарий и JavaScript</div>
-            </SwiperSlide>
+            {slideObj.map((obj) => (
+              <SwiperSlide key={obj.imageUrl}>
+                <img className="blog__image" src={obj.imageUrl} alt="Photo" />
+                <div className="blog__text">{obj.discription}</div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>

@@ -9,10 +9,15 @@
     margin-top: 20px;
     font-weight: 200;
     font-size: 25px;
+    cursor: pointer;
   }
   &__slider {
     width: 1150px;
     margin: auto;
     margin-bottom: 100px;
+  }
+  &__image {
+    width: 550px;
+    height: 350px;
   }
 }
