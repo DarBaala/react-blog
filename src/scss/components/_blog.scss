@@ -1,0 +1,18 @@
+.blog {
+  &__title {
+    color: #353535;
+    font-weight: 400;
+    font-size: 50px;
+    margin-top: 0;
+  }
+  &__text {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 25px;
+  }
+  &__slider {
+    width: 1150px;
+    margin: auto;
+    margin-bottom: 100px;
+  }
+}

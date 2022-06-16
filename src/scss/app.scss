@@ -6,6 +6,10 @@ body {
   font-family: "Mulish", sans-serif;
 }
 .container {
-  width: 1300px;
+  max-width: 1300px;
   margin: auto;
+}
+a {
+  color: #fff;
+  text-decoration: none;
 }

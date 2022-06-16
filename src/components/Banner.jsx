@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <div className="banner">
       <Parallax
-        bgImage={require("../assets/backround-banner.webp")}
+        bgImage={require("../assets/img/backround-banner.webp")}
         bgImageAlt="Banner"
         strength={300}
       >
