@@ -43,7 +43,7 @@ const Blog = () => {
           >
             {slideObj.map((obj) => (
               <SwiperSlide key={obj.imageUrl}>
-                <img className="blog__image " src={obj.imageUrl} alt="Photo" />
+                <img className="blog__image" src={obj.imageUrl} alt="Blog" />
                 <div className="blog__text">{obj.discription}</div>
               </SwiperSlide>
             ))}

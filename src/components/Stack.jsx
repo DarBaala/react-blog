@@ -42,8 +42,8 @@ const Stack = () => {
         <h2 className="stack__title">Stack:</h2>
         <div className="stack__block">
           {stackObj.map((obj) => (
-            <div key={obj.title}>
-              <div className={obj.style}>{obj.title}</div>
+            <div className={obj.style} key={obj.title}>
+              <p> {obj.title}</p>
               <div className={obj.style + "--popup"}>
                 <p>{obj.discription}</p>
               </div>
