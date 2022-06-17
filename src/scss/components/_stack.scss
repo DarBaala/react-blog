@@ -23,6 +23,8 @@
     background-color: #e03e2d;
     padding: 10px;
     &--popup {
+      transition: 0.1s;
+      transform: translateY(25%);
       transition-delay: 0.18s;
       box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.5);
       visibility: hidden;
@@ -44,6 +46,7 @@
     }
     &:hover + &--popup {
       visibility: visible;
+      transform: translateY(0%);
     }
   }
   &__css {
@@ -56,6 +59,8 @@
     background-color: #173459;
     padding: 10px;
     &--popup {
+      transition: 0.1s;
+      transform: translateY(25%);
       transition-delay: 0.18s;
       box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.5);
       visibility: hidden;
@@ -77,6 +82,7 @@
     }
     &:hover + &--popup {
       visibility: visible;
+      transform: translateY(0%);
     }
   }
   &__js {
@@ -89,6 +95,8 @@
     background-color: #f7df1e;
     padding: 10px;
     &--popup {
+      transition: 0.1s;
+      transform: translateY(25%);
       transition-delay: 0.18s;
       box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.5);
       visibility: hidden;
@@ -110,6 +118,7 @@
     }
     &:hover + &--popup {
       visibility: visible;
+      transform: translateY(0%);
     }
   }
   &__ts {
@@ -122,6 +131,8 @@
     background-color: #3178c6;
     padding: 10px;
     &--popup {
+      transition: 0.1s;
+      transform: translateY(25%);
       transition-delay: 0.18s;
       box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.5);
       visibility: hidden;
@@ -143,6 +154,7 @@
     }
     &:hover + &--popup {
       visibility: visible;
+      transform: translateY(0%);
     }
   }
   &__react {
@@ -155,6 +167,8 @@
     background-color: #2a2c2e;
     padding: 10px;
     &--popup {
+      transition: 0.1s;
+      transform: translateY(25%);
       transition-delay: 0.18s;
       box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.5);
       visibility: hidden;
@@ -176,6 +190,7 @@
     }
     &:hover + &--popup {
       visibility: visible;
+      transform: translateY(0%);
     }
   }
   &__figma {
@@ -188,6 +203,8 @@
     background-color: #1e1e1e;
     padding: 10px;
     &--popup {
+      transition: 0.1s;
+      transform: translateY(25%);
       transition-delay: 0.18s;
       box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.5);
       visibility: hidden;
@@ -209,6 +226,7 @@
     }
     &:hover + &--popup {
       visibility: visible;
+      transform: translateY(0%);
     }
   }
   &__photoshop {
@@ -221,6 +239,8 @@
     background-color: #001e36;
     padding: 10px;
     &--popup {
+      transition: 0.1s;
+      transform: translateY(25%);
       transition-delay: 0.18s;
       box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.5);
       visibility: hidden;
@@ -242,6 +262,7 @@
     }
     &:hover + &--popup {
       visibility: visible;
+      transform: translateY(0%);
     }
   }
   &__illustrator {
@@ -254,6 +275,8 @@
     background-color: #330000;
     padding: 10px;
     &--popup {
+      transition: 0.1s;
+      transform: translateY(25%);
       transition-delay: 0.18s;
       box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.5);
       visibility: hidden;
@@ -275,6 +298,7 @@
     }
     &:hover + &--popup {
       visibility: visible;
+      transform: translateY(0%);
     }
   }
   &__discription {
