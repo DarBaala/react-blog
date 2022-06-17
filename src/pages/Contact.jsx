@@ -5,7 +5,6 @@ const Contact = () => {
   return (
     <>
       <Header />
-      <h1>Контакты</h1>
     </>
   );
 };

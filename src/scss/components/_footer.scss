@@ -36,21 +36,21 @@
       }
     }
   }
-  &__input {
-    margin-right: 35px;
-    padding: 0 80px 5px 20px;
-    border: none;
-    border-bottom: solid #fff 2px;
-    background-color: #000;
-    font-size: 18px;
-    color: #fff;
-    outline: none;
-    &::placeholder {
-      color: #706b6b;
-      font-size: 18px;
-      font-weight: 600;
-    }
-  }
+  // &__input {
+  //   margin-right: 35px;
+  //   padding: 0 80px 5px 20px;
+  //   border: none;
+  //   border-bottom: solid #fff 2px;
+  //   background-color: #000;
+  //   font-size: 18px;
+  //   color: #fff;
+  //   outline: none;
+  //   &::placeholder {
+  //     color: #706b6b;
+  //     font-size: 18px;
+  //     font-weight: 600;
+  //   }
+  // }
   &__button {
     cursor: pointer;
     padding-bottom: 5px;
@@ -60,5 +60,9 @@
     color: #fff;
     border: none;
     border-bottom: solid #fff 2px;
+  }
+  &__form {
+    display: flex;
+    align-items: center;
   }
 }

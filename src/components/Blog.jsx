@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import { Navigation } from "swiper";
+import { Zoom, Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/navigation";
@@ -11,19 +11,19 @@ import "swiper/scss/zoom";
 const slideObj = [
   {
     imageUrl: require("../assets/img/slide-1.webp"),
-    discription: " От фотографа до Frontend разработчика",
+    discription: "От фотографа до Frontend разработчика",
   },
   {
     imageUrl: require("../assets/img/slide-2.webp"),
-    discription: " От фотографа до Frontend разработчика",
+    discription: "А что было в начале: логика или...?",
   },
   {
     imageUrl: require("../assets/img/slide-3.webp"),
-    discription: " От фотографа до Frontend разработчика",
+    discription: "От фотографа до Frontend разработчика",
   },
   {
     imageUrl: require("../assets/img/slide-4.webp"),
-    discription: " От фотографа до Frontend разработчика",
+    discription: "А что было в начале: логика или...?",
   },
 ];
 
@@ -36,14 +36,25 @@ const Blog = () => {
         </Link>
         <div className="blog__slider">
           <Swiper
-            modules={[Navigation]}
+            style={{
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            }}
+            zoom={true}
+            modules={[Zoom, Navigation, Autoplay]}
             slidesPerView={2}
             spaceBetween={40}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
             navigation
           >
             {slideObj.map((obj) => (
               <SwiperSlide key={obj.imageUrl}>
-                <img className="blog__image" src={obj.imageUrl} alt="Blog" />
+                <div className="swiper-zoom-container">
+                  <img className="blog__image" src={obj.imageUrl} alt="Blog" />
+                </div>
                 <div className="blog__text">{obj.discription}</div>
               </SwiperSlide>
             ))}
