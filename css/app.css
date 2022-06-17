@@ -365,9 +365,12 @@ template {
   display: flex;
 }
 
+.header__menu a {
+  margin-right: 35px;
+}
+
 .header__items {
   color: #353535;
-  margin-right: 35px;
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
@@ -556,9 +559,18 @@ template {
 }
 
 .stack__illustrator {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 45px;
+  cursor: pointer;
   color: #ff9a00;
   background-color: #330000;
   padding: 10px;
+}
+
+.stack__illustrator:hover + .stack__illustrator--active {
+  display: none;
 }
 
 .stack__discription {
@@ -571,6 +583,10 @@ template {
 
 .stack__discription span {
   color: #e03e2d;
+}
+
+.stack__hide {
+  display: none;
 }
 
 .blog__title {
@@ -727,5 +743,10 @@ body {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.notfound h2 {
+  text-align: center;
+  padding: 100px;
 }
 /*# sourceMappingURL=app.css.map */

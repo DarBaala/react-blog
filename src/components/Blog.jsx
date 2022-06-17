@@ -1,9 +1,12 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/navigation";
+import "swiper/scss/zoom";
 
 const slideObj = [
   {
@@ -28,7 +31,9 @@ const Blog = () => {
   return (
     <div className="container">
       <div className="blog">
-        <h3 className="blog__title">Blog</h3>
+        <Link to={"/posting"}>
+          <h3 className="blog__title">Blog</h3>
+        </Link>
         <div className="blog__slider">
           <Swiper
             modules={[Navigation]}
@@ -38,7 +43,7 @@ const Blog = () => {
           >
             {slideObj.map((obj) => (
               <SwiperSlide key={obj.imageUrl}>
-                <img className="blog__image" src={obj.imageUrl} alt="Photo" />
+                <img className="blog__image " src={obj.imageUrl} alt="Photo" />
                 <div className="blog__text">{obj.discription}</div>
               </SwiperSlide>
             ))}

@@ -11,10 +11,12 @@
   }
   &__menu {
     display: flex;
+    a {
+      margin-right: 35px;
+    }
   }
   &__items {
     color: #353535;
-    margin-right: 35px;
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
