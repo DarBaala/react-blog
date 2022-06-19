@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Мой путь во фронтенд",
+    "discription": "От фотографа до Frontend разработчика",
+    "imageUrl": "../../assets/img/slide-1.webp"
+  },
+  {
+    "title": "Я не знаю, что тут написать",
+    "discription": "От фотографа до",
+    "imageUrl": "../../assets/img/slide-2.webp"
+  },
+  {
+    "title": "Я люблю флудить",
+    "discription": "От фотографа до Frontend разработчика",
+    "imageUrl": "../../assets/img/slide-3.webp"
+  },
+  {
+    "title": "Или топить котят",
+    "discription": "От фотографа до Frontend разработчика",
+    "imageUrl": "../../assets/img/slide-4.webp"
+  }
+]

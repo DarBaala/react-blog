@@ -11,14 +11,15 @@ import { useSelector } from "react-redux/es/exports";
 
 const Media = () => {
   const news = useSelector((state) => state.blog.news);
+  console.log(news);
 
   return (
     <div className="media__container">
       <div className="media">
         <div className="media__wrapper">
-          {news.map(({ imageUrl, discription, id }) => (
+          {news.map(({ title, imageUrl, discription }) => (
             <Card
-              key={id}
+              key={imageUrl}
               sx={{
                 maxWidth: 430,
                 backgroundColor: "rgb(18, 18, 18)",
@@ -45,7 +46,7 @@ const Media = () => {
                   variant="h5"
                   component="div"
                 >
-                  {discription}
+                  {title}
                 </Typography>
                 <Typography
                   sx={{
@@ -56,11 +57,7 @@ const Media = () => {
                   variant="body2"
                   color="text.secondary"
                 >
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except
-                  AntarcticaLizards are a widespread group of squamate reptiles,
-                  with over 6,000 species, ranging across all continents except
-                  Antarctica
+                  {discription}
                 </Typography>
               </CardContent>
               <CardActions
