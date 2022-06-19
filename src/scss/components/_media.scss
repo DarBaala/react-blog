@@ -1,0 +1,14 @@
+.media {
+  &__container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 40px;
+    justify-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}

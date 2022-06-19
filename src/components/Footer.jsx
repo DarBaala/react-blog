@@ -4,13 +4,6 @@ import React from "react";
 import Link from "@mui/material/Link";
 
 const Footer = () => {
-  const style = {
-    "& .MuiOutlinedInput-root": {
-      "&.Mui-focused fieldset": {
-        borderColor: "green",
-      },
-    },
-  };
   return (
     <footer className="footer">
       <div className="footer__container">

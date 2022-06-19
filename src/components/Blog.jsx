@@ -8,26 +8,11 @@ import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/zoom";
 
-const slideObj = [
-  {
-    imageUrl: require("../assets/img/slide-1.webp"),
-    discription: "От фотографа до Frontend разработчика",
-  },
-  {
-    imageUrl: require("../assets/img/slide-2.webp"),
-    discription: "А что было в начале: логика или...?",
-  },
-  {
-    imageUrl: require("../assets/img/slide-3.webp"),
-    discription: "От фотографа до Frontend разработчика",
-  },
-  {
-    imageUrl: require("../assets/img/slide-4.webp"),
-    discription: "А что было в начале: логика или...?",
-  },
-];
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
 const Blog = () => {
+  const slides = useSelector((state) => state.blog.news);
+
   return (
     <div className="container">
       <div className="blog">
@@ -50,7 +35,7 @@ const Blog = () => {
             }}
             navigation
           >
-            {slideObj.map((obj) => (
+            {slides.map((obj) => (
               <SwiperSlide key={obj.imageUrl}>
                 <div className="swiper-zoom-container">
                   <img className="blog__image" src={obj.imageUrl} alt="Blog" />
