@@ -1,0 +1,22 @@
+.fullnews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__wrapper {
+    margin: 70px 0;
+  }
+  &__img {
+    width: 650px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  &__discription {
+    font-size: 20px;
+  }
+}

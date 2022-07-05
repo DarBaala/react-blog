@@ -1,4 +1,7 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
+
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -17,7 +20,7 @@ const Media = () => {
     <div className="media__container">
       <div className="media">
         <div className="media__wrapper">
-          {news.map(({ title, imageUrl, discription }) => (
+          {news.map(({ id, title, imageUrl, discription }) => (
             <Card
               key={imageUrl}
               sx={{
@@ -76,16 +79,18 @@ const Media = () => {
                 >
                   Поделиться
                 </Button>
-                <Button
-                  sx={{
-                    color: "#fff",
-                    backgroundColor: "#000",
-                    padding: "7px 9px",
-                  }}
-                  size="small"
-                >
-                  Читать дальше
-                </Button>
+                <Link to={`/news/${id}`}>
+                  <Button
+                    sx={{
+                      color: "#fff",
+                      backgroundColor: "#000",
+                      padding: "7px 9px",
+                    }}
+                    size="small"
+                  >
+                    Читать дальше
+                  </Button>
+                </Link>
               </CardActions>
             </Card>
           ))}

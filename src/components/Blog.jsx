@@ -40,7 +40,9 @@ const Blog = () => {
                 <div className="swiper-zoom-container">
                   <img className="blog__image" src={obj.imageUrl} alt="Blog" />
                 </div>
-                <div className="blog__text">{obj.discription}</div>
+                <Link to={`/news/${obj.id}`}>
+                  <div className="blog__text">{obj.discription}</div>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>

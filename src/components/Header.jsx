@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
+import logoSvg from "../assets/img/logo.svg";
 
 const Header = () => {
   const { isAuth } = useAuth();
@@ -10,7 +11,7 @@ const Header = () => {
       <header className="header">
         <div className="header__logo">
           <Link to="/">
-            <img src="img/logo.svg" alt="Icon: logo" />
+            <img src={logoSvg} alt="Icon: logo" />
           </Link>
         </div>
         <div className="header__menu">

@@ -7,11 +7,12 @@ import Posting from "./pages/Posting";
 import NotFound from "./pages/NotFound";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import FullNews from "./pages/FullNews";
+import { Admin } from "./pages/Admin";
 
 import { useEffect } from "react";
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
 import { fetchNews } from "./redux/slices/blogSlice";
-import { Admin } from "./pages/Admin";
 
 function App() {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       <Route path="/admin" element={<Admin />} />
-
+      <Route path="/news/:id" element={<FullNews />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

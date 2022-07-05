@@ -15,7 +15,7 @@ const dispatch = useDispatch()
   return isAuth ? (
     <div>
       <h2>Вы - админ!</h2>
-      <button onClick={()=> dispatch(removeUser())} >Выйти {email}</button>
+      
     </div>
   ) : (
     <Navigate to="/login" state={{ from: location }} />
