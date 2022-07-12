@@ -4,7 +4,9 @@ import { useAuth } from "../hooks/use-auth";
 import logoSvg from "../assets/img/logo.svg";
 
 const Header = () => {
-  const { isAuth } = useAuth();
+  const { isAuth, id } = useAuth();
+
+  const adminId = "RjwwQ16rZFYtuvH2jK7beWr6rrc2";
 
   return (
     <div className="container">
@@ -24,10 +26,16 @@ const Header = () => {
           <Link to="/contact">
             <span className="header__items">Контакты</span>
           </Link>
-          <Link to="/login">
-            <span className="header__items">Авторизация</span>
-          </Link>
           {isAuth ? (
+            <Link to="/login">
+              <span className="header__items">Выйти</span>
+            </Link>
+          ) : (
+            <Link to="/login">
+              <span className="header__items">Авторизация</span>
+            </Link>
+          )}
+          {id === adminId ? (
             <Link to="/admin">
               <span className="header__items">Админка</span>
             </Link>

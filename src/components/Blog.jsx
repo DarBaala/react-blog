@@ -36,12 +36,12 @@ const Blog = () => {
             navigation
           >
             {slides.map((obj) => (
-              <SwiperSlide key={obj.imageUrl}>
+              <SwiperSlide key={obj.id}>
                 <div className="swiper-zoom-container">
                   <img className="blog__image" src={obj.imageUrl} alt="Blog" />
                 </div>
                 <Link to={`/news/${obj.id}`}>
-                  <div className="blog__text">{obj.discription}</div>
+                  <div className="blog__text">{obj.title}</div>
                 </Link>
               </SwiperSlide>
             ))}

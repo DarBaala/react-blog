@@ -1,0 +1,42 @@
+.getpost {
+  &__admin {
+    text-align: center;
+    font-weight: 400;
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__input {
+    width: 400px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-color: rgba(24, 23, 23, 0.921);
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__file {
+    background: black;
+    color: white;
+    padding: 11px;
+    margin-bottom: 30px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  &__textarea {
+    border-radius: 5px;
+    width: 400px;
+    border: 2px solid;
+    border-color: rgba(24, 23, 23, 0.921);
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    resize: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}

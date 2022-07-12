@@ -24,7 +24,7 @@ const Media = () => {
             <Card
               key={imageUrl}
               sx={{
-                maxWidth: 430,
+                maxWidth: 470,
                 backgroundColor: "rgb(18, 18, 18)",
                 display: "flex",
                 flexDirection: "column",
@@ -33,7 +33,7 @@ const Media = () => {
             >
               <CardMedia
                 component="img"
-                height="240"
+                height="340"
                 image={imageUrl}
                 alt="green iguana"
               />
@@ -95,18 +95,6 @@ const Media = () => {
             </Card>
           ))}
         </div>
-        <Stack sx={{ mb: "20px" }} spacing={4}>
-          <Pagination
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              color: "#fff",
-            }}
-            count={10}
-            variant="outlined"
-            shape="rounded"
-          />
-        </Stack>
       </div>
     </div>
   );

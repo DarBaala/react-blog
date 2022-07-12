@@ -1,4 +1,7 @@
 import React from "react";
+import Header from "../components/Header";
+import GetPost from "../components/GetPost";
+
 import { useLocation, Navigate } from "react-router-dom";
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
 import { removeUser } from "../redux/slices/userSlice";
@@ -6,16 +9,17 @@ import { removeUser } from "../redux/slices/userSlice";
 import { useAuth } from "../hooks/use-auth";
 
 export const Admin = () => {
-const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const { isAuth, email } = useAuth();
-
+  const { isAuth, id } = useAuth();
+  const adminId = "RjwwQ16rZFYtuvH2jK7beWr6rrc2";
   const location = useLocation();
 
-  return isAuth ? (
+  return id === adminId ? (
     <div>
-      <h2>Вы - админ!</h2>
-      
+      <Header />
+      <h2 className="getpost__admin">Добавления поста</h2>
+      <GetPost />
     </div>
   ) : (
     <Navigate to="/login" state={{ from: location }} />
