@@ -1,28 +1,60 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import axios from "axios";
 
 const GetPost = () => {
   const [title, setTitle] = useState("");
-  const [discription, setDiscription] = useState("");
+  const [description, setDescription] = useState("");
+  const [objCloudinary, setCloudinary] = useState([]);
+  const [imageUrl, setImageUrl] = useState("");
 
+  useEffect(() => {
+    if (objCloudinary && objCloudinary.secure_url) {
+      setImageUrl(objCloudinary.secure_url);
+    }
+  }, [objCloudinary]);
+
+  console.log(imageUrl);
   const handleChangeTitle = (event) => {
     setTitle(event.target.value);
   };
-  const handleChangeDiscription = (event) => {
-    setDiscription(event.target.value);
+  const handleChangeDescription = (event) => {
+    setDescription(event.target.value);
   };
+  const uploadImage = (files) => {
+    let upload = false;
+    if (files) {
+      upload = window.confirm(
+        `Вы точно хотите загрузить картинку ${files[0].name}`
+      );
+    }
+    if (upload) {
+      const formData = new FormData();
+      formData.append("file", files[0]);
+      formData.append("upload_preset", "nmteg_upload");
+      try {
+        axios
+          .post("https://api.cloudinary.com/v1_1/nmteg/image/upload", formData)
+          .then((response) => setCloudinary(response.data));
+      } catch (error) {
+        console.error("Не удалось загрузить картинку!");
+      }
+      upload = false;
+    }
+  };
+
   const createObject = () => {
-    if (title.length > 10 || discription.length > 20) {
+    if (title.length > 10 && description.length > 20 && imageUrl) {
       const obj = {
         title: title,
-        discription: discription,
+        description: description,
+        imageUrl: imageUrl,
       };
       console.log(obj);
       toDoPost(obj);
     } else {
       alert(
-        "Поле заголовка должно содержать более 10 символов, а описание - минимум 20!"
+        "Вы не загрузили картинку или поле заголовка содержит менее 10 символов, а описание - меньше 20!"
       );
     }
   };
@@ -33,9 +65,11 @@ const GetPost = () => {
     } catch (error) {
       console.error("Не удалось отправить созданный пост на сервер!");
     }
+    setTitle("");
+    setDescription("");
+    alert("Ваш пост добавлен, обновите страницу, чтобы он отобразился!");
   };
 
-  console.log(title, discription);
   return (
     <div className="getpost">
       <form className="getpost__form">
@@ -44,15 +78,21 @@ const GetPost = () => {
           type="text"
           placeholder="Заголовок"
           onChange={(event) => handleChangeTitle(event)}
+          value={title}
         />
         <textarea
           className="getpost__textarea"
           name="text"
           id=""
           rows="10"
-          onChange={(event) => handleChangeDiscription(event)}
+          onChange={(event) => handleChangeDescription(event)}
+          value={description}
         ></textarea>
-        <input className="getpost__file" type="file" />
+        <input
+          onChange={(event) => uploadImage(event.target.files)}
+          className="getpost__file"
+          type="file"
+        />
         <Button
           onClick={createObject}
           sx={{

@@ -21,7 +21,7 @@ const Banner = () => {
               <div className="banner__text-up">Frontend</div>
               <div className="banner__text-down">разработчик</div>
             </div>
-            <div className="banner__discription">а еще немного дизайнер ;)</div>
+            <div className="banner__description">а еще немного дизайнер ;)</div>
           </div>
         </div>
         <div style={{ height: "100vh" }} />

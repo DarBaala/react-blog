@@ -35,7 +35,7 @@ const FullNews = () => {
         <div className="fullnews__wrapper">
           <img className="fullnews__img" src={news.imageUrl} alt="" />
           <h3 className="fullnews__title">{news.title}</h3>
-          <p className="fullnews__discription">{news.discription}</p>
+          <p className="fullnews__description">{news.description}</p>
         </div>
         <Link to="/posting">
           <Button

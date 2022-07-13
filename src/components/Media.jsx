@@ -8,8 +8,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
 import { useSelector } from "react-redux/es/exports";
 
 const Media = () => {
@@ -20,7 +18,7 @@ const Media = () => {
     <div className="media__container">
       <div className="media">
         <div className="media__wrapper">
-          {news.map(({ id, title, imageUrl, discription }) => (
+          {news.map(({ id, title, imageUrl, description }) => (
             <Card
               key={imageUrl}
               sx={{
@@ -60,7 +58,7 @@ const Media = () => {
                   variant="body2"
                   color="text.secondary"
                 >
-                  {discription}
+                  {description}
                 </Typography>
               </CardContent>
               <CardActions
