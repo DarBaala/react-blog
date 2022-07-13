@@ -8,7 +8,7 @@ export const fetchNews = createAsyncThunk("blog/fetchNews", async () => {
     );
     return data;
   } catch (error) {
-    console.log("Error");
+    console.error("Не получены новости");
   }
 });
 

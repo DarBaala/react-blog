@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const GetPost = () => {
   const [title, setTitle] = useState("");
@@ -8,13 +9,14 @@ const GetPost = () => {
   const [objCloudinary, setCloudinary] = useState([]);
   const [imageUrl, setImageUrl] = useState("");
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (objCloudinary && objCloudinary.secure_url) {
       setImageUrl(objCloudinary.secure_url);
     }
   }, [objCloudinary]);
 
-  console.log(imageUrl);
   const handleChangeTitle = (event) => {
     setTitle(event.target.value);
   };
@@ -50,7 +52,6 @@ const GetPost = () => {
         description: description,
         imageUrl: imageUrl,
       };
-      console.log(obj);
       toDoPost(obj);
     } else {
       alert(
@@ -68,6 +69,7 @@ const GetPost = () => {
     setTitle("");
     setDescription("");
     alert("Ваш пост добавлен, обновите страницу, чтобы он отобразился!");
+    navigate("/");
   };
 
   return (

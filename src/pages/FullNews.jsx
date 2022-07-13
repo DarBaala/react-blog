@@ -26,7 +26,7 @@ const FullNews = () => {
     fetchNews();
   }, []);
   if (!news) {
-    return <h3 className="container"></h3>;
+    return <h3 className="container">Загрузка...</h3>;
   }
   return (
     <div>

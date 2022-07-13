@@ -12,7 +12,6 @@ import { useSelector } from "react-redux/es/exports";
 
 const Media = () => {
   const news = useSelector((state) => state.blog.news);
-  console.log(news);
 
   return (
     <div className="media__container">
