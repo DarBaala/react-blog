@@ -1,20 +1,17 @@
 {
   "files": {
-    "main.css": "/react-blog/static/css/main.28e8fde3.css",
-    "main.js": "/react-blog/static/js/main.6dac2364.js",
-    "static/media/slide-1.webp": "/react-blog/static/media/slide-1.0757e783bb81f06cfbd7.webp",
-    "static/media/slide-3.webp": "/react-blog/static/media/slide-3.3328a84dcb8cf9f27d13.webp",
-    "static/media/slide-2.webp": "/react-blog/static/media/slide-2.4401fa54ad1932e4887e.webp",
+    "main.css": "/react-blog/static/css/main.cbbac3fb.css",
+    "main.js": "/react-blog/static/js/main.697a459f.js",
     "static/media/backround-banner.webp": "/react-blog/static/media/backround-banner.010882d67b16502e3ad8.webp",
-    "static/media/slide-4.webp": "/react-blog/static/media/slide-4.4746766d8f71b9abc81e.webp",
+    "static/media/logo.svg": "/react-blog/static/media/logo.92535750db09bf71b15caf226932704d.svg",
     "static/media/sun-icon.svg": "/react-blog/static/media/sun-icon.c11ed6f601b1bf81c685.svg",
     "index.html": "/react-blog/index.html",
     "static/media/dark-icon.svg": "/react-blog/static/media/dark-icon.ed45cf5d911e1b2a3158.svg",
-    "main.28e8fde3.css.map": "/react-blog/static/css/main.28e8fde3.css.map",
-    "main.6dac2364.js.map": "/react-blog/static/js/main.6dac2364.js.map"
+    "main.cbbac3fb.css.map": "/react-blog/static/css/main.cbbac3fb.css.map",
+    "main.697a459f.js.map": "/react-blog/static/js/main.697a459f.js.map"
   },
   "entrypoints": [
-    "static/css/main.28e8fde3.css",
-    "static/js/main.6dac2364.js"
+    "static/css/main.cbbac3fb.css",
+    "static/js/main.697a459f.js"
   ]
 }
